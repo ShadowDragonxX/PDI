@@ -1,7 +1,7 @@
 <?php
 require('WriteHtml.php');
 
-$pdf=new PDF_HTML();
+$pdf=new PDF_HTML('L','mm','letter');
 
 $pdf->AliasNbPages();
 $pdf->SetAutoPageBreak(true, 15);
