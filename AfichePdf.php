@@ -1,5 +1,9 @@
 <?php
-$nombre=$_POST['Nombre'];
+if($_SERVER['REQUEST_METHOD']=='POST')
+{
+	$algo= $_POST['Nombre'];
+}
+
 ?>
 <html>
 <head>
@@ -9,7 +13,7 @@ $nombre=$_POST['Nombre'];
 		<table class="centered">
             <tr>
                 <td>Nombre Completo: </td>
-                <td><?php $nombre?></td>
+                <td><?php echo $_POST['Nombre'];?></td>
             </tr>
             <tr>
                 <td>Edad: </td>
@@ -50,5 +54,4 @@ $nombre=$_POST['Nombre'];
 
         </table>
 	</body>
-</html>';
-?> 
+</html>
