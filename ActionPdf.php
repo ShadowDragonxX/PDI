@@ -46,62 +46,76 @@ $pdf->SetXY(95,65);
 $pdf->SetFillColor(180,202,226);
 $pdf->SetTextColor(2,71,93);
 $pdf->Cell(60,10,"Nombre Completo:",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
+$pdf->SetFont('Arial','',13); 
 $pdf->Cell(60,10,$nombre,0,0,'',True);
+
 $pdf->SetXY(95,73);
-$pdf->SetFont('Arial','B',15); 
+$pdf->SetFont('Arial','B',13); 
 $pdf->Cell(60,10,"Edad: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
+$pdf->SetFont('Arial','',13); 
 $pdf->Cell(60,10,$edad,0,0,'',True);
 
 
 $pdf->SetXY(95,80);
-$pdf->SetFont('Arial','B',15); 
+$pdf->SetFont('Arial','B',13); 
 $pdf->Cell(60,10,"Estatura: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
+$pdf->SetFont('Arial','',13); 
 $pdf->Cell(60,10,$mide,0,0,'',True);
 
 $pdf->SetXY(95,87);
-$pdf->SetFont('Arial','B',15); 
+$pdf->SetFont('Arial','B',13); 
 $pdf->Cell(60,10,"Tez: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
-$pdf->Cell(60,10,$tez,0,0,'',True);
+$pdf->SetFont('Arial','',13); 
+$pdf->Cell(60,9,$tez,0,0,'',True);
 
 $pdf->SetXY(95,94);
-$pdf->SetFont('Arial','B',15); 
-$pdf->Cell(60,10,"Iris: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
-$pdf->Cell(60,10,$iris,0,0,'',True);
+$pdf->SetFont('Arial','B',13); 
+$pdf->Cell(60,11,"Iris: ",0,0,'',True);
+$pdf->SetFont('Arial','',13); 
+$pdf->Cell(60,11,$iris,0,0,'',True);
 
 $pdf->SetXY(95,101);
-$pdf->SetFont('Arial','B',15); 
+$pdf->SetFont('Arial','B',13); 
 $pdf->Cell(60,10,"Contextura: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
+$pdf->SetFont('Arial','',13); 
 $pdf->Cell(60,10,$contextura,0,0,'',True);
 
 $pdf->SetXY(95,108);
-$pdf->SetFont('Arial','B',15); 
+$pdf->SetFont('Arial','B',13); 
 $pdf->Cell(60,10,"Cabello: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
+$pdf->SetFont('Arial','',13); 
 $pdf->Cell(60,10,$cabello,0,0,'',True);
 
 $pdf->SetXY(95,115);
-$pdf->SetFont('Arial','B',15); 
+$pdf->SetFont('Arial','B',13); 
 $pdf->Cell(60,10,"Vestimenta: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
+$pdf->SetFont('Arial','',13); 
 $pdf->Cell(60,10,$ropa,0,0,'',True);
 
 $pdf->SetXY(95,122);
-$pdf->SetFont('Arial','B',15); 
+$pdf->SetFont('Arial','B',13); 
 $pdf->Cell(60,10,"Fecha: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
+$pdf->SetFont('Arial','',13); 
 $pdf->Cell(60,10,$fecha,0,0,'',True);
 
 $pdf->SetXY(95,129);
-$pdf->SetFont('Arial','B',15); 
+$pdf->SetFont('Arial','B',13); 
 $pdf->Cell(60,10,"Lugar: ",0,0,'',True);
-$pdf->SetFont('Arial','',15); 
+$pdf->SetFont('Arial','',13); 
 $pdf->Cell(60,10,$lugar,0,0,'',True);
+
+$pdf->SetXY(160,140);
+$pdf->SetFont('Arial','B',13); 
+$pdf->SetTextColor(2,71,93);
+$pdf->Cell(60,10,"Brigada de Ubicacion de Personas Metropolitana",0,0,'',false);
+$pdf->SetXY(189,145);
+$pdf->Cell(60,10,"Telefono: 22 708 21 78",0,0,'',false);
+$pdf->SetXY(163,150);
+$pdf->Cell(60,10,"Correo electronico: ",0,0,'',false);
+$pdf->SetXY(208,150);
+$pdf->SetFont('Arial','U',13);
+$pdf->SetTextColor(0,0,255);
+$pdf->Cell(60,10,"briup@investigaciones.cl",0,0,'',false);
 
 
 
