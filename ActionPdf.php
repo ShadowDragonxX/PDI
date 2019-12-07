@@ -10,6 +10,8 @@ $cabello=$_POST['Cabello'];
 $ropa=$_POST['Vestimenta'];
 $fecha=$_POST['Fecha'];
 $lugar=$_POST['Lugar'];
+$texto=utf8_decode("Años");
+
 $nombreFoto=$_FILES['Foto']['name'];
 $guardado=$_FILES['Foto']['tmp_name'];
 $todo='fotos/'.$nombreFoto;
@@ -96,6 +98,8 @@ $pdf->SetFont('Arial','B',11);
 $pdf->Cell(60,10,"Edad: ",0,0,'',False);
 $pdf->SetFont('Arial','',11); 
 $pdf->Cell(60,10,$edad,0,0,'',False);
+$pdf->SetXY(162,63);
+$pdf->Cell(60,10,$texto,0,0,'',False);
 
 
 $pdf->SetXY(95,68);
