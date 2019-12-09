@@ -1,15 +1,17 @@
 <?php
 require('WriteHtml.php');
-$nombre=$_POST['Nombre'];
+$nombre=utf8_decode($_POST['Nombre']);
 $edad=$_POST['Edad'];
-$mide=$_POST['Estatura'];
-$tez=$_POST['Tez'];
-$iris=$_POST['Iris'];
-$contextura=$_POST['Contextura'];
-$cabello=$_POST['Cabello'];
-$ropa=$_POST['Vestimenta'];
+$metros=$_POST['estaturaUno'];
+$cm=$_POST['estaturaDos'];
+$mide=$metros.".".$cm." "."Mts";
+$tez=utf8_decode($_POST['Tez']);
+$iris=utf8_decode($_POST['Iris']);
+$contextura=utf8_decode($_POST['Contextura']);
+$cabello=utf8_decode($_POST['Cabello']);
+$ropa=utf8_decode($_POST['Vestimenta']);
 $fecha=$_POST['Fecha'];
-$lugar=$_POST['Lugar'];
+$lugar=utf8_decode($_POST['Lugar']);
 $texto=utf8_decode("Años");
 
 $nombreFoto=$_FILES['Foto']['name'];
