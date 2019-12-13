@@ -5,6 +5,7 @@ $edad=$_POST['Edad'];
 $metros=$_POST['estaturaUno'];
 $cm=$_POST['estaturaDos'];
 $mide=$metros.".".$cm." "."Mts";
+$extra=utf8_decode($_POST['extras']);
 $tez=utf8_decode($_POST['Tez']);
 $iris=utf8_decode($_POST['Iris']);
 $contextura=utf8_decode($_POST['Contextura']);
@@ -26,7 +27,7 @@ if($_FILES['Foto']['error']>0)
 else
 {
 	$permitido = array('image/png','image/jpeg');
-	$limite=200;
+	$limite=3000;
 	if(in_array($_FILES['Foto']['type'],$permitido) && $_FILES['Foto']['size']<=$limite*1024)
 	{
 		if (!file_exists('fotos')) {
@@ -102,6 +103,12 @@ $pdf->SetFont('Arial','',11);
 $pdf->Cell(60,10,$edad,0,0,'',False);
 $pdf->SetXY(162,63);
 $pdf->Cell(60,10,$texto,0,0,'',False);
+$pdf->SetFont('Arial','B',11); 
+$pdf->SetXY(190,63);
+$pdf->Cell(60,10,"Extras: ",0,0,'',false);
+$pdf->SetFont('Arial','',11); 
+$pdf->SetXY(210,63);
+$pdf->MultiCell(40,4,$extra,0,0,'',false);
 
 
 $pdf->SetXY(95,68);
@@ -153,7 +160,7 @@ $pdf->SetFont('Arial','',11);
 $pdf->Cell(60,10,$lugar,0,0,'',False);
 
 $pdf->SetXY(160,140);
-$pdf->SetFont('Arial','B',11); 
+$pdf->SetFont('Arial','B',10); 
 $pdf->SetTextColor(2,71,93);
 $pdf->Cell(60,10,"Brigada de Ubicacion de Personas Metropolitana",0,0,'',false);
 $pdf->SetXY(189,145);
@@ -161,7 +168,7 @@ $pdf->Cell(60,10,"Telefono: 22 708 21 78",0,0,'',false);
 $pdf->SetXY(163,150);
 $pdf->Cell(60,10,"Correo electronico: ",0,0,'',false);
 $pdf->SetXY(208,150);
-$pdf->SetFont('Arial','U',11);
+$pdf->SetFont('Arial','U',10);
 $pdf->SetTextColor(0,0,255);
 $pdf->Cell(60,10,"briup@investigaciones.cl",0,0,'',false);
 
